@@ -1,0 +1,196 @@
+[data-theme="Light"]{
+    --highlight1: #2D82B7;
+    --highlight2: #8cc2e3;
+    --background1: #f3dfbf;
+    --background2: #fcf6ee;
+    --textcolour1: #000000;
+    --textcolour2: #ffffff;
+}
+[data-theme="Dark"]{
+    --highlight2: #2D82B7;
+    --highlight1: #8cc2e3;
+    --background1: #001b2e;
+    --background2: #999999;
+    --textcolour2: #000000;
+    --textcolour1: #ffffff;
+}
+@media (prefers-color-scheme: dark){
+    body{
+        --highlight2: #2D82B7;
+        --highlight1: #8cc2e3;
+        --background1: #001b2e;
+        --background2: #999999;
+        --textcolour2: #000000;
+        --textcolour1: #ffffff; 
+    }
+}
+@media (prefers-color-scheme: light){
+    body{
+        --highlight1: #2D82B7;
+        --highlight2: #8cc2e3;
+        --background1: #f3dfbf;
+        --background2: #fcf6ee;
+        --textcolour1: #000000;
+        --textcolour2: #ffffff;
+    }
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--background1);
+}
+header{
+    width: 100vw;
+    text-align: center;
+    font-family: 'Bungee', cursive;
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    line-height: 5rem;
+    color: var(--highlight1);
+}
+button{
+    cursor: pointer;
+}
+header h1{
+    text-shadow: 3px 4px var(--highlight2);
+}
+footer{
+    background-color: var(--highlight2);
+    border-radius:0.5rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+footer a{
+    color: var(--textcolour2);
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+section{
+    background-color: var(--background2);
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+section h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#options div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+}
+#options article{
+    background-color: var(--highlight2);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+article h3{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+article div{
+    display: flex;
+    flex-flow: column wrap;
+}
+article div button{
+    width: 100%;
+    margin: 0.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#DrumButtonsDiv{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#DrumButtons button{
+    margin: 0.2rem;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+#DrumButtons button:focus{
+    margin: 0.2rem;
+    background-color: var(--highlight1);
+    color: var(--textcolour2);
+}
+section p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width:700px){
+    .drumshide{
+        display: none;
+    }
+}
+
+#drumflex {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+#drumgrid{
+    width: 640px;
+    height: 522px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 100px 50px 70px 50px 25px 40px 5px 30px 45px 20px 15px 30px 5px 90px 15px 1fr;
+    grid-template-rows: 20px 10px 40px 15px 35px 5px 15px 30px 10px 40px 5px 10px 5px 70px 180px 1fr;
+}
+#drumgrid button{
+    opacity: 0%;
+    border: none;
+}
+#drumgrid button:focus{
+    background-color: var(--highlight1);
+    opacity: 70%;
+}
+#bass-drum{
+    grid-area: 13/4/16/12;
+    border-radius: 100%;
+    z-index: 2;
+}
+#snare{
+    grid-area: 10/9/14/14;
+}
+#floor-tom{
+    grid-area: 9/3/15/5;
+}
+#high-tom{
+    grid-area: 7/8/11/11;
+    z-index: 2;
+}
+#medium-tom{
+    grid-area: 6/4/12/7;
+    z-index: 2;
+}
+#hi-hat{
+    grid-area: 6/13/8/16;
+    border-radius: 50%;
+}
+#ride{
+    grid-area: 3/10/4/15;
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    border-top-right-radius: 20%;
+}
+#crash{
+    grid-area: 2/2/5/6;
+    border-bottom-left-radius:70%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 70%;
+}
+
+#DrumKit img{
+    z-index: 1;
+    position: absolute;
+}

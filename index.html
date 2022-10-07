@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Drumkit</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+    <header>
+        <h1>HTML Drums</h1>
+    </header>
+    <main>
+        <section id="options">
+            <h2>Settings</h2>
+            <div>  
+                <article>
+                    <h3>Theme</h3>
+                    <div>
+                        <button id="lightbutton">Light</button>
+                        <button id="darkbutton">Dark</button>
+                        <button id="systembutton">System</button>
+                    </div>
+                </article>
+                <article>
+                    <h3>Virtual Drums</h3>
+                    <div>
+                        <button id="virtualenable">Enable</button>
+                        <button id="virtualdisable">Disable</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section>
+            <h2>How to use</h2>
+            <p>Use the num keys to play the notes listed below.</p>
+            <p class="drumshide">Click the diagram to play the notes associated with the selected drum.</p>
+        </section>
+        <section id="DrumButtons">
+            <h2>Drum Notes</h2>
+            <div id="DrumButtonsDiv">
+            </div>
+        </section>
+        <section id="DrumKit" class="drumshide">
+            <h2>Drum Kit</h2>
+            <div id="drumflex">
+                <div id="drumgrid">
+                    
+                </div>
+                <img src="assets/drums.png">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://jacobtufts.com">jacobtufts.com (my website)</a>
+    </footer>
+    <script aync defer src="script.js"></script>
+</body>
+</html>
